@@ -1,0 +1,11 @@
+{
+  "title": "Welcome to WinnerDream",
+  "login": "Login",
+  "register": "Sign Up",
+  "email": "Email address",
+  "password": "Password",
+  "fullname": "Full name",
+  "already_account": "Already have an account?",
+  "no_account": "Don’t have an account?",
+  "logout": "Logout"
+}
