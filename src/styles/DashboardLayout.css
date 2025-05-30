@@ -1,0 +1,99 @@
+/* DashboardLayout.css */
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f1f4f9;
+  color: #1a1a1a;
+}
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Header simple pour tableau de bord */
+.dashboard-header {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 0;
+  color: #003087;
+}
+
+/* Section principale du dashboard */
+.dashboard-section {
+  padding: 40px 30px;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-title {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Grid pour organiser les blocs (cards) */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.dashboard-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  border-top: 4px solid #0070ba;
+  cursor: pointer;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 112, 186, 0.1);
+}
+
+.dashboard-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #003087;
+}
+
+.dashboard-card p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 1.5em;
+  }
+
+  .dashboard-section {
+    padding: 20px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+

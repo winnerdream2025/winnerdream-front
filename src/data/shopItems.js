@@ -1,0 +1,42 @@
+export const shopItems = [
+  {
+    id: "ebook-1",
+    category: "E-book",
+    name: "Guide Marketing 2025",
+    price: 19.99,
+    type: "Numérique",
+    description: "Apprenez les stratégies digitales de demain.",
+  },
+  {
+    id: "template-1",
+    category: "Template",
+    name: "Site Vitrine Pro",
+    price: 49.99,
+    type: "Numérique",
+    description: "Un template professionnel pour présenter vos services.",
+  },
+  {
+    id: "cm-1",
+    category: "Community Management",
+    name: "Pack Réseaux Sociaux - 1 Mois",
+    price: 199.99,
+    type: "Service",
+    description: "Gérez vos réseaux sociaux avec un expert pendant 1 mois.",
+  },
+  {
+    id: "tshirt-1",
+    category: "T-shirt",
+    name: "T-shirt WinnerDream",
+    price: 24.99,
+    type: "Physique",
+    description: "T-shirt en coton avec branding WinnerDream.",
+  },
+  {
+    id: "mug-1",
+    category: "Mug",
+    name: "Mug WinnerDream",
+    price: 14.99,
+    type: "Physique",
+    description: "Mug personnalisé pour votre bureau.",
+  },
+];

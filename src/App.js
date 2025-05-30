@@ -1,46 +1,66 @@
-import './App.css';
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './Login';
-import Register from './Register';
-import Dashboard from './Dashboard';
-import './i18n';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import Home from './pages/Home';
+import Login from './auth/Login';
+import Register from './auth/Register';
+import ForgotPassword from './auth/ForgotPassword';
+import Dashboard from './pages/Dashboard';
+import WebsitePlanDetail from './pages/WebsitePlanDetail';
+import ServiceDetail from './pages/ServiceDetail';
+import SubscribeSuccess from './pages/SubscribeSuccess';
+import SubscribeCancel from './pages/SubscribeCancel';
+import NotFound from './pages/NotFound';
+import Shop from './pages/Shop';
+import PlanDetail from './pages/PlanDetail';
+import TermsAndConditions from './pages/TermsAndConditions';
+
+import PrivateRoute from './auth/PrivateRoute';
+import MainLayout from './layouts/MainLayout';
 
 function App() {
-  const [showLogin, setShowLogin] = useState(true);
-  const { t, i18n } = useTranslation();
-
   return (
     <Router>
-      <div className="App">
-        <img src="/img1.png" alt="WinnerDream Logo" style={{ maxWidth: '140px', marginBottom: '20px', borderRadius: '12px' }} />
+      <Routes>
+        {/* Redirection vers login */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
 
-        <div style={{ marginBottom: '20px' }}>
-          <button onClick={() => i18n.changeLanguage('fr')} style={{ marginRight: '10px' }}>FR</button>
-          <button onClick={() => i18n.changeLanguage('en')}>EN</button>
-        </div>
+        {/* Auth */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
 
-        <Routes>
-          <Route path="/" element={
-            <>
-              {showLogin ? <Login /> : <Register />}
-              <p style={{ marginTop: '30px' }}>
-                {showLogin ? t("no_account") : t("already_account")}{" "}
-                <button onClick={() => setShowLogin(!showLogin)} style={{ padding: '5px 10px' }}>
-                  {showLogin ? t("register") : t("login")}
-                </button>
-              </p>
-            </>
-          } />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      </div>
+        {/* Public */}
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+
+        {/* Protected Pages with Layout */}
+        <Route path="/home" element={<PrivateRoute><MainLayout><Home /></MainLayout></PrivateRoute>} />
+        <Route path="/dashboard" element={<PrivateRoute><MainLayout><Dashboard /></MainLayout></PrivateRoute>} />
+        <Route path="/shop" element={<PrivateRoute><MainLayout><Shop /></MainLayout></PrivateRoute>} />
+        <Route path="/services/:slug" element={<PrivateRoute><MainLayout><ServiceDetail /></MainLayout></PrivateRoute>} />
+        <Route path="/website-plans/:type" element={<PrivateRoute><MainLayout><PlanDetail /></MainLayout></PrivateRoute>} />
+
+        {/* Stripe */}
+        <Route path="/subscribe-success" element={<SubscribeSuccess />} />
+        <Route path="/subscribe-cancel" element={<SubscribeCancel />} />
+
+        {/* 404 */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
+      <ToastContainer position="top-right" autoClose={3000} />
     </Router>
   );
 }
 
 export default App;
+
+
+
+
+
 
 
 

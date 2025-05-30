@@ -1,0 +1,35 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { WebsitePlans } from '../data/services';
+import PlanCard from '../components/PlanCard';
+
+function WebsitePlansPage() {
+  const navigate = useNavigate();
+
+  return (
+    <div className="min-h-screen p-6 bg-white">
+      <h1 className="text-3xl font-bold text-center mb-10">
+        Nos Offres de Sites Web
+      </h1>
+
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {WebsitePlans.map((plan, index) => (
+          <PlanCard key={index} {...plan} />
+        ))}
+      </div>
+
+      <div className="text-center mt-8">
+        <button
+          onClick={() => navigate('/home')}
+          className="text-sm text-blue-600 underline"
+        >
+          ← Retour aux services
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default WebsitePlansPage;
+
+

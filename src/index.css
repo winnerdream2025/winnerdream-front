@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== STYLES PERSO UTILES ========== */
+
+body {
+  @apply bg-white text-gray-800 font-sans;
+}
+
+/* Bouton générique */
+.btn {
+  @apply inline-block px-5 py-2 rounded-lg font-semibold text-white bg-green-600 hover:bg-green-700 transition;
+}
+
+/* Carte de base */
+.card {
+  @apply bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition;
+}
+
+/* Titre section */
+.section-title {
+  @apply text-3xl font-bold text-center mb-6;
+}
+
+/* Texte de lien */
+.link {
+  @apply text-blue-600 hover:underline;
+}
+
+/* Input formulaire */
+.input {
+  @apply w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500;
+}
+
+/* Titre de carte */
+.card-title {
+  @apply text-xl font-semibold mb-2;
+}
+.btn-subscribe {
+  @apply px-6 py-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition;
+}
