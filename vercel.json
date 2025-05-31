@@ -1,9 +1,11 @@
 {
-  "buildCommand": "npm install --legacy-peer-deps && npm run build",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
     }
+  },
+  "installCommand": "npm install --legacy-peer-deps",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
