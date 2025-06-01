@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { auth } from '../firebase/firebase';
 import logo from '../assets/logo.png';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleLogout = async () => {
     await auth.signOut();
@@ -22,10 +24,10 @@ function Navbar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
-        <li><Link to="/home" className="hover:text-green-600">Accueil</Link></li>
-        <li><Link to="/dashboard" className="hover:text-green-600">Dashboard</Link></li>
-        <li><Link to="/shop" className="hover:text-green-600">Shop</Link></li>
-        <li><button onClick={handleLogout} className="text-red-600 hover:underline">Déconnexion</button></li>
+        <li><Link to="/home" className="hover:text-green-600">{t('navbar.home')}</Link></li>
+        <li><Link to="/dashboard" className="hover:text-green-600">{t('navbar.dashboard')}</Link></li>
+        <li><Link to="/shop" className="hover:text-green-600">{t('navbar.shop')}</Link></li>
+        <li><button onClick={handleLogout} className="text-red-600 hover:underline">{t('navbar.logout')}</button></li>
       </ul>
 
       {/* Hamburger (Mobile) */}
@@ -38,10 +40,10 @@ function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <ul className="absolute top-full left-0 w-full bg-white flex flex-col items-center gap-4 py-4 shadow-md md:hidden">
-          <li><Link to="/home" onClick={() => setMenuOpen(false)}>Accueil</Link></li>
-          <li><Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link></li>
-          <li><Link to="/shop" onClick={() => setMenuOpen(false)}>Shop</Link></li>
-          <li><button onClick={handleLogout} className="text-red-600">Déconnexion</button></li>
+          <li><Link to="/home" onClick={() => setMenuOpen(false)}>{t('navbar.home')}</Link></li>
+          <li><Link to="/dashboard" onClick={() => setMenuOpen(false)}>{t('navbar.dashboard')}</Link></li>
+          <li><Link to="/shop" onClick={() => setMenuOpen(false)}>{t('navbar.shop')}</Link></li>
+          <li><button onClick={handleLogout} className="text-red-600">{t('navbar.logout')}</button></li>
         </ul>
       )}
     </nav>
@@ -49,6 +51,7 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
 
 

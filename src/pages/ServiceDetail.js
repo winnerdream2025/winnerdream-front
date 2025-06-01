@@ -1,14 +1,16 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { RegularServices } from '../data/services';
+import { useTranslation } from 'react-i18next';
 
 function ServiceDetail() {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const service = RegularServices.find((s) => s.slug === slug);
 
   if (!service) {
-    navigate('/home'); // 🔁 Redirection propre si service introuvable
+    navigate('/home');
     return null;
   }
 
@@ -22,7 +24,9 @@ function ServiceDetail() {
 
       {service.features && (
         <div className="bg-gray-100 p-4 rounded-md mb-6">
-          <h2 className="text-lg font-semibold mb-2 text-gray-700">Fonctionnalités incluses :</h2>
+          <h2 className="text-lg font-semibold mb-2 text-gray-700">
+            {t('serviceDetail.featuresTitle')}
+          </h2>
           <ul className="list-disc list-inside text-gray-700 space-y-1">
             {service.features.map((feature, idx) => (
               <li key={idx}>{feature}</li>
@@ -36,13 +40,13 @@ function ServiceDetail() {
           to="/dashboard"
           className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded"
         >
-          Prendre un rendez-vous
+          {t('serviceDetail.bookAppointment')}
         </Link>
         <Link
           to="/dashboard"
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded"
         >
-          Obtenir un devis
+          {t('serviceDetail.getQuote')}
         </Link>
       </div>
     </div>
@@ -50,6 +54,7 @@ function ServiceDetail() {
 }
 
 export default ServiceDetail;
+
 
 
 

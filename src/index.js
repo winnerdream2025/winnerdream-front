@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css'; // 👈 à garder une seule fois
+import './index.css'; // Styles globaux
 import App from './App';
+import './i18n'; // Initialisation i18next
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,16 +1,183 @@
 {
-  "welcome_title": "✅ WinnerDream fonctionne !",
-  "welcome_subtitle": "Nous rendons votre entreprise visible en ligne.",
-  "contact_title": "📩 Contactez-nous",
-  "contact_subtitle": "Dites-nous vos besoins, on vous répond vite.",
-  "name": "Votre Nom",
-  "email": "Votre Email",
-  "message": "Votre Message",
-  "send": "Envoyer",
-  "no_account": "Pas encore de compte ?",
-  "already_account": "Vous avez déjà un compte ?",
-  "register": "Créer un compte",
-  "login": "Connexion"
+  "welcome": "Bienvenue",
+  "choose_language": "Veuillez choisir votre langue",
+  "next": "Suivant",
+
+  "dashboard.loading": "Chargement de votre tableau de bord...",
+  "dashboard.welcome": "Bienvenue, {{email}}",
+  "dashboard.subtitle": "Voici un aperçu complet de vos services.",
+  "dashboard.addTestData": "➕ Ajouter des données de test",
+
+  "home.title": "Nos Services WinnerDream",
+  "home.subtitle": "Boostez votre business avec nos offres",
+  "home.services": "Services",
+  "home.websitePlans": "Nos Offres de Sites Web",
+  "home.explore": "Explorer",
+
+  "notFound.title": "404",
+  "notFound.message": "Oups... cette page n'existe pas.",
+  "notFound.backHome": "Retour à l’accueil",
+
+  "planDetail.includes": "Ce plan inclut :",
+  "planDetail.bonus": "🎁 Bonus :",
+  "planDetail.acceptTerms": "J’accepte les ",
+  "planDetail.acceptTerms.label": "J’accepte les ",
+  "planDetail.acceptTerms.link": "conditions générales",
+  "planDetail.bookAppointment": "Prendre un rendez-vous",
+  "planDetail.subscribe": "Souscrire",
+  "planDetail.appointment": "Prendre un rendez-vous",
+  "planDetail.mustAccept": "Veuillez accepter les conditions générales.",
+  "planDetail.mustLogin": "Vous devez être connecté.",
+  "planDetail.alert.acceptTerms": "Veuillez accepter les conditions générales.",
+  "planDetail.alert.login": "Vous devez être connecté.",
+  "planDetail.alert.noUrl": "Erreur : aucune URL Stripe retournée.",
+  "planDetail.alert.subscribeError": "Erreur lors de la souscription.",
+  "planDetail.error.noUrl": "Erreur : aucune URL Stripe retournée.",
+  "planDetail.error.subscription": "Erreur lors de la souscription.",
+
+  "serviceDetail.featuresTitle": "Fonctionnalités incluses :",
+  "serviceDetail.bookAppointment": "Prendre un rendez-vous",
+  "serviceDetail.getQuote": "Obtenir un devis",
+
+  "shop.title": "Boutique WinnerDream",
+  "shop.buy": "Acheter",
+
+  "terms.title": "Conditions Générales d’Utilisation",
+  "terms.intro": "En utilisant les services de WinnerDream, vous acceptez les conditions suivantes. Ces conditions régissent l’utilisation de nos produits, abonnements et fonctionnalités.",
+  "terms.section1.title": "1. Abonnements",
+  "terms.section1.content": "L’abonnement mensuel est renouvelé automatiquement. Vous pouvez l’annuler à tout moment via votre tableau de bord.",
+  "terms.section2.title": "2. Paiement",
+  "terms.section2.content": "Tous les paiements sont gérés de manière sécurisée via Stripe. Aucune donnée bancaire n’est stockée sur nos serveurs.",
+  "terms.section3.title": "3. Propriété",
+  "terms.section3.content": "Vous restez propriétaire de vos données. Si vous souscrivez un plan de site web, vous pouvez demander un transfert à tout moment.",
+  "terms.section4.title": "4. Assistance",
+  "terms.section4.content": "Notre équipe est disponible pour vous assister sur les aspects techniques et commerciaux via votre espace client.",
+  "terms.section5.title": "5. Résiliation",
+  "terms.section5.content": "Vous pouvez mettre fin à votre abonnement à tout moment. Aucun remboursement n’est effectué pour les périodes déjà entamées.",
+  "terms.accept": "✅ J’ai lu et j’accepte",
+  "terms.back": "⬅ Retour",
+
+  "stripe.mustLogin": "Vous devez être connecté.",
+  "stripe.noUrl": "Erreur : aucune URL retournée.",
+  "stripe.sessionError": "Erreur lors de la création de la session de paiement.",
+
+  "email.appointment.subject": "Confirmation de votre rendez-vous",
+  "email.appointment.body": "Vous avez bien réservé un rendez-vous le {{date}} à {{time}}. Merci d’avoir choisi WinnerDream.",
+
+  "llc.title": "Création d’entreprise (LLC)",
+  "llc.description": "Lancez votre société à responsabilité limitée (LLC) aux États-Unis en toute simplicité avec WinnerDream. Nous vous accompagnons dans toutes les démarches.",
+  "llc.features": [
+    "✅ Création de la LLC dans l’État de votre choix (Delaware, Wyoming, etc.)",
+    "📄 Rédaction et remise du certificat de formation (Articles of Organization)",
+    "🧾 Obtention du EIN (Employer Identification Number) auprès de l’IRS",
+    "📁 Rédaction du Operating Agreement personnalisé",
+    "📬 Adresse professionnelle aux États-Unis (optionnelle)",
+    "👨‍⚖️ Assistance pour l’ouverture de compte bancaire (Mercury, Wise, etc.)",
+    "💼 Conseils sur les obligations fiscales et comptables",
+    "📞 Support client en français par e-mail ou WhatsApp"
+  ],
+  "llc.benefits.title": "Avantages de notre service LLC :",
+  "llc.benefits.items": [
+    "✅ Mise en place 100% à distance – aucun déplacement nécessaire",
+    "✅ LLC créée en 2 à 7 jours ouvrés",
+    "✅ Accompagnement en anglais et en français",
+    "✅ Accès à des outils business (Stripe, PayPal, Wise, Mercury, QuickBooks)",
+    "✅ Support client à vie via WhatsApp et Zoom"
+  ],
+  "llc.receive.title": "Ce que vous recevrez :",
+  "llc.receive.items": [
+    "📄 Articles of Organization (enregistrement officiel de l’État)",
+    "📊 EIN fédéral (numéro d’identification de l’employeur)",
+    "📘 Operating Agreement (personnalisé)",
+    "🛡️ Service d’agent enregistré (1 an inclus)",
+    "🏦 Aide à l’ouverture d’un compte bancaire pro aux USA"
+  ],
+  "llc.states.title": "États disponibles :",
+  "llc.states.text": "Vous pouvez enregistrer votre LLC dans le Wyoming, le Delaware, le Texas ou la Floride – selon votre stratégie et préférences fiscales. Nous vous aidons à choisir.",
+  "llc.whatsapp": "📲 Démarrer sur WhatsApp",
+  "llc.appointment": "📅 Prendre rendez-vous",
+  "llc.footer": "© 2025 Winners Dream Business Growth LLC — Tous droits réservés.",
+
+  "ads.title": "Publicité en ligne",
+  "ads.description": "Augmentez la visibilité de votre entreprise grâce à des campagnes publicitaires ciblées sur Facebook, Instagram et Google Ads. Nous optimisons votre budget pour obtenir les meilleurs résultats.",
+  "ads.features": [
+    "Création et gestion de campagnes Facebook & Instagram",
+    "Publicité Google Ads (Search, Display, YouTube)",
+    "Segmentation d’audience précise et ciblée",
+    "Design de visuels attractifs et textes engageants",
+    "Rapports de performance et recommandations",
+    "Suivi et optimisation hebdomadaire"
+  ],
+  "ads.benefits": [
+    "Plus de trafic vers votre site web",
+    "Génération de prospects qualifiés",
+    "Amélioration de la notoriété de votre marque",
+    "Retour sur investissement mesurable"
+  ],
+  "ads.price": "À partir de 149$ / mois",
+
+  "app.title": "Développement d’application mobile",
+  "app.description": "Nous concevons des applications mobiles sur mesure pour Android et iOS, adaptées à vos objectifs business et aux attentes de vos utilisateurs.",
+  "app.features": [
+    "Applications natives Android et iOS",
+    "Développement multiplateforme avec React Native",
+    "Interface utilisateur moderne et intuitive",
+    "Connexion à des bases de données en temps réel (ex: Firebase)",
+    "Fonctionnalités avancées : géolocalisation, notifications push, paiements, etc.",
+    "Publication sur App Store et Google Play"
+  ],
+  "app.benefits": [
+    "Présence mobile professionnelle",
+    "Amélioration de l'expérience client",
+    "Accès aux fonctionnalités natives des téléphones",
+    "Extension de votre business 24h/24"
+  ],
+  "app.price": "selon la complexité de l’application",
+
+  "digital.title": "Digitalisation",
+  "digital.description": "Passez au numérique avec nos solutions complètes pour moderniser votre entreprise. Nous vous accompagnons dans la gestion digitale, la présence en ligne, et l'automatisation de vos processus.",
+  "digital.features": [
+    "Création d’outils de gestion (inventaire, facturation, etc.)",
+    "Transformation de vos documents physiques en outils numériques",
+    "Mise en place de CRM et ERP personnalisés",
+    "Formation à l’usage des outils digitaux",
+    "Optimisation de vos workflows internes",
+    "Accompagnement à la transition digitale"
+  ],
+  "digital.benefits": [
+    "Gain de temps et d’efficacité",
+    "Réduction des erreurs humaines",
+    "Accès aux données en temps réel",
+    "Amélioration de la prise de décision"
+  ],
+  "digital.price": "Sur devis — selon les besoins spécifiques",
+
+  "login.title": "Bienvenue sur WinnerDream",
+  "login.subtitle": "Connecte-toi pour gérer ton business en ligne",
+  "login.email": "Email",
+  "login.password": "Mot de passe",
+  "login.button": "Se connecter",
+  "login.forgot": "Mot de passe oublié ?",
+  "login.click_here": "Clique ici",
+  "login.error": "Email ou mot de passe incorrect",
+
+  "forgot.title": "Réinitialisation du mot de passe",
+  "forgot.placeholder": "Entrez votre email",
+  "forgot.button": "Envoyer le lien",
+  "forgot.success": "📧 Un email de réinitialisation a été envoyé.",
+  "forgot.error": "❌ Impossible d'envoyer l'email. Vérifie l'adresse.",
+  "forgot.back": "Retour à la connexion",
+
+  "navbar": {
+    "home": "Accueil",
+    "dashboard": "Dashboard",
+    "shop": "Boutique",
+    "logout": "Déconnexion"
+  }
 }
+
+
+
+
 
 

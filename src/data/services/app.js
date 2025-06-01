@@ -18,7 +18,7 @@ const appService = {
     "Accès aux fonctionnalités natives des téléphones",
     "Extension de votre business 24h/24",
   ],
-  price: "À partir de 500 € — selon la complexité de l’application",
+  price: "selon la complexité de l’application",
 };
 
 export default appService;

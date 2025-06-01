@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -16,6 +16,8 @@ import NotFound from './pages/NotFound';
 import Shop from './pages/Shop';
 import PlanDetail from './pages/PlanDetail';
 import TermsAndConditions from './pages/TermsAndConditions';
+import HelloPage from './pages/HelloPage';
+import './i18n';
 
 import PrivateRoute from './auth/PrivateRoute';
 import MainLayout from './layouts/MainLayout';
@@ -24,8 +26,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Redirection vers login */}
-        <Route path="/" element={<Navigate to="/login" replace />} />
+        {/* Page de bienvenue (choix de langue) */}
+        <Route path="/" element={<HelloPage />} />
 
         {/* Auth */}
         <Route path="/login" element={<Login />} />

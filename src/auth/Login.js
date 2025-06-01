@@ -1,7 +1,9 @@
+// src/auth/Login.js
 import React, { useState } from 'react';
 import { auth } from '../firebase/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import '../styles/login.css';
 import logo from '../assets/logo.png';
 
@@ -10,34 +12,35 @@ function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/home'); // ✅ Redirection vers la page d'accueil
+      navigate('/home');
     } catch (err) {
-      setError('Email ou mot de passe incorrect');
+      setError(t('login.error'));
     }
   };
 
   return (
     <div className="login-container">
       <img src={logo} alt="WinnerDream Logo" className="logo" />
-      <h2>Bienvenue sur WinnerDream</h2>
-      <p>Connecte-toi pour gérer ton business en ligne</p>
+      <h2>{t('login.title')}</h2>
+      <p>{t('login.subtitle')}</p>
 
       <form onSubmit={handleLogin} className="login-form">
         <input
           type="email"
-          placeholder="Email"
+          placeholder={t('login.email')}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
           type="password"
-          placeholder="Mot de passe"
+          placeholder={t('login.password')}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -45,17 +48,18 @@ function Login() {
 
         {error && <p className="error">{error}</p>}
 
-        <button type="submit">Se connecter</button>
+        <button type="submit">{t('login.button')}</button>
       </form>
 
       <p>
-        Mot de passe oublié ? <a href="/forgot-password">Clique ici</a>
+        {t('login.forgot')} <a href="/forgot-password">{t('login.click_here')}</a>
       </p>
     </div>
   );
 }
 
 export default Login;
+
 
 
 

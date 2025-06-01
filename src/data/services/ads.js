@@ -18,8 +18,9 @@ const adsService = {
     "Amélioration de la notoriété de votre marque",
     "Retour sur investissement mesurable",
   ],
-  price: "À partir de 149€ / mois",
+  price: "À partir de 149$ / mois",
 };
 
 export default adsService;
+
 

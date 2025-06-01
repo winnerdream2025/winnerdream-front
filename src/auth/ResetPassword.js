@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { auth } from '../firebase/firebase';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import logo from '../assets/logo.png';
+import { useTranslation } from 'react-i18next';
 
 function ForgotPassword() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
@@ -12,10 +14,10 @@ function ForgotPassword() {
     e.preventDefault();
     try {
       await sendPasswordResetEmail(auth, email);
-      setMessage('Un email de réinitialisation a été envoyé.');
+      setMessage(t('forgot.success'));
       setError('');
     } catch (err) {
-      setError("Impossible d'envoyer l'email. Vérifie l'adresse.");
+      setError(t('forgot.error'));
       setMessage('');
     }
   };
@@ -23,12 +25,12 @@ function ForgotPassword() {
   return (
     <div className="login-container">
       <img src={logo} alt="WinnerDream Logo" className="logo" />
-      <h2>Réinitialisation du mot de passe</h2>
+      <h2>{t('forgot.title')}</h2>
 
       <form onSubmit={handleReset} className="login-form">
         <input
           type="email"
-          placeholder="Entrez votre email"
+          placeholder={t('forgot.placeholder')}
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -37,15 +39,16 @@ function ForgotPassword() {
         {message && <p className="success">{message}</p>}
         {error && <p className="error">{error}</p>}
 
-        <button type="submit">Envoyer le lien</button>
+        <button type="submit">{t('forgot.button')}</button>
       </form>
 
       <p>
-        <a href="/login">Retour à la connexion</a>
+        <a href="/login">{t('forgot.back')}</a>
       </p>
     </div>
   );
 }
 
 export default ForgotPassword;
+
 

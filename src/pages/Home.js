@@ -1,11 +1,14 @@
+// src/pages/Home.js
 import React, { useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { auth } from '../firebase/firebase';
 import { WebsitePlans, RegularServices } from '../data/services';
+import { useTranslation } from 'react-i18next';
 import '../styles/home.css';
 
 function Home() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -17,13 +20,13 @@ function Home() {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Nos Services WinnerDream</h1>
-        <p>Boostez votre business avec nos offres</p>
+        <h1>{t('home.title')}</h1>
+        <p>{t('home.subtitle')}</p>
       </header>
 
       {/* SERVICES */}
       <section className="services">
-        <h2>Services</h2>
+        <h2>{t('home.services')}</h2>
         <div className="service-list">
           {Array.isArray(RegularServices) &&
             RegularServices.slice().reverse().map((service) => (
@@ -34,7 +37,7 @@ function Home() {
                   to={`/services/${service.slug}`}
                   className="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
                 >
-                  Explorer
+                  {t('home.explore')}
                 </Link>
               </div>
             ))}
@@ -43,7 +46,7 @@ function Home() {
 
       {/* PLANS */}
       <section className="services">
-        <h2>Nos Offres de Sites Web</h2>
+        <h2>{t('home.websitePlans')}</h2>
         <div className="service-list">
           {Array.isArray(WebsitePlans) &&
             WebsitePlans.map((plan) => (
@@ -58,7 +61,7 @@ function Home() {
                   to={`/website-plans/${plan.type}`}
                   className="mt-2 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
                 >
-                  Explorer
+                  {t('home.explore')}
                 </Link>
               </div>
             ))}
@@ -69,6 +72,7 @@ function Home() {
 }
 
 export default Home;
+
 
 
 

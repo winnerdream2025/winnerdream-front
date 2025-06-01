@@ -1,25 +1,42 @@
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
+import { auth } from '../firebase/firebase'; // uniquement si tu utilises Firebase
+import { getIdToken } from 'firebase/auth';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 function SubscribeButton({ priceId }) {
   const handleClick = async () => {
-    const stripe = await stripePromise;
-    const response = await fetch('/create-checkout-session', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ priceId }),
-    });
+    try {
+      const stripe = await stripePromise;
 
-    const session = await response.json();
+      const user = auth.currentUser;
+      if (!user) {
+        alert("Vous devez être connecté.");
+        return;
+      }
 
-    const result = await stripe.redirectToCheckout({
-      sessionId: session.id,
-    });
+      const token = await getIdToken(user, true);
 
-    if (result.error) {
-      console.error(result.error.message);
+      const response = await fetch('http://localhost:4242/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ planCode: priceId, userId: user.uid }),
+      });
+
+      const session = await response.json();
+
+      if (session.url) {
+        window.location.href = session.url;
+      } else {
+        alert('Une erreur est survenue. Session Stripe non valide.');
+      }
+    } catch (error) {
+      console.error('Erreur Stripe:', error);
+      alert('Impossible de procéder au paiement.');
     }
   };
 

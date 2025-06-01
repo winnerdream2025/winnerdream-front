@@ -1,14 +1,246 @@
 {
-  "welcome_title": "✅ WinnerDream is live!",
-  "welcome_subtitle": "Helping your business become visible online.",
-  "contact_title": "📩 Contact Us",
-  "contact_subtitle": "Let us know your needs, we’ll get back quickly.",
-  "name": "Your Name",
-  "email": "Your Email",
-  "message": "Your Message",
-  "send": "Send",
-  "no_account": "Don't have an account?",
-  "already_account": "Already have an account?",
-  "register": "Register",
-  "login": "Login"
+  "welcome": "Welcome",
+  "choose_language": "Please choose your language",
+  "next": "Next",
+
+  "dashboard.loading": "Loading your dashboard...",
+  "dashboard.welcome": "Welcome, {{email}}",
+  "dashboard.subtitle": "Here is a complete overview of your services.",
+  "dashboard.addTestData": "➕ Add test data",
+
+  "home.title": "Our WinnerDream Services",
+  "home.subtitle": "Boost your business with our offers",
+  "home.services": "Services",
+  "home.websitePlans": "Our Website Subscription Plans",
+  "home.explore": "Explore",
+
+  "notFound.title": "404",
+  "notFound.message": "Oops... this page does not exist.",
+  "notFound.backHome": "Back to home",
+
+  "planDetail.includes": "This plan includes:",
+  "planDetail.bonus": "🎁 Bonus:",
+  "planDetail.acceptTerms": "I accept the ",
+  "planDetail.acceptTerms.label": "I accept the ",
+  "planDetail.acceptTerms.link": "terms and conditions",
+  "planDetail.bookAppointment": "Book an appointment",
+  "planDetail.subscribe": "Subscribe",
+  "planDetail.appointment": "Book an appointment",
+  "planDetail.mustAccept": "Please accept the terms and conditions.",
+  "planDetail.mustLogin": "You must be logged in.",
+  "planDetail.alert.acceptTerms": "Please accept the terms and conditions.",
+  "planDetail.alert.login": "You must be logged in.",
+  "planDetail.alert.noUrl": "Error: No Stripe URL returned.",
+  "planDetail.alert.subscribeError": "Subscription error.",
+  "planDetail.error.noUrl": "Error: No Stripe URL returned.",
+  "planDetail.error.subscription": "Subscription error.",
+
+  "serviceDetail.featuresTitle": "Included features:",
+  "serviceDetail.bookAppointment": "Book an appointment",
+  "serviceDetail.getQuote": "Get a quote",
+
+  "shop.title": "WinnerDream Shop",
+  "shop.buy": "Buy",
+
+  "terms.title": "Terms and Conditions of Use",
+  "terms.intro": "By using WinnerDream services, you agree to the following terms. These terms govern the use of our products, subscriptions, and features.",
+  "terms.section1.title": "1. Subscriptions",
+  "terms.section1.content": "The monthly subscription renews automatically. You can cancel it anytime through your dashboard.",
+  "terms.section2.title": "2. Payment",
+  "terms.section2.content": "All payments are securely processed via Stripe. No banking data is stored on our servers.",
+  "terms.section3.title": "3. Ownership",
+  "terms.section3.content": "You retain ownership of your data. If you subscribe to a website plan, you can request a transfer at any time.",
+  "terms.section4.title": "4. Support",
+  "terms.section4.content": "Our team is available to assist you with technical and business matters via your client space.",
+  "terms.section5.title": "5. Termination",
+  "terms.section5.content": "You can end your subscription at any time. No refunds are issued for already started periods.",
+  "terms.accept": "✅ I have read and accept",
+  "terms.back": "⬅ Back",
+
+  "digital.header.title": "Social Media Management & Paid Advertising",
+  "digital.header.subtitle": "Grow your brand visibility and attract real customers online",
+  "digital.why.title": "Why choose Winners Dream?",
+  "digital.why.content": "We help you create a strong and consistent online presence that speaks directly to your target audience. From engaging content to smart ad strategies, we do it all for you.",
+  "digital.social.title": "Our Social Media Services:",
+  "digital.social.items": [
+    "📱 Profile setup and branding (Facebook, Instagram, TikTok, etc.)",
+    "🎨 Content creation (graphics, videos, captions)",
+    "🗓️ Publishing calendar and community management",
+    "📢 Reputation monitoring and engagement growth"
+  ],
+  "digital.ads.title": "Our Advertising Services:",
+  "digital.ads.items": [
+    "📊 Facebook and Instagram ads",
+    "🔍 Google Ads (Search & Display)",
+    "🎯 Audience targeting & retargeting",
+    "✍️ Ad copywriting and creative design",
+    "📈 Performance tracking and weekly reports"
+  ],
+  "digital.for.title": "Who is this for?",
+  "digital.for.content": "Entrepreneurs, small businesses, service providers, influencers — anyone who wants to grow online without spending hours figuring it out themselves.",
+  "digital.contact.whatsapp": "Message Us on WhatsApp",
+  "digital.contact.call": "Book a Strategy Call",
+  "digital.footer": "© 2025 Winners Dream Business Growth LLC — All rights reserved.",
+
+  "email.appointment.subject": "Your Appointment Confirmation",
+  "email.appointment.body": "You have successfully booked an appointment on {{date}} at {{time}}. Thank you for choosing WinnerDream.",
+
+  "stripe.mustLogin": "You must be logged in.",
+  "stripe.noUrl": "Error: No URL returned.",
+  "stripe.sessionError": "Error creating checkout session.",
+
+  "llc.title": "Company Formation (LLC)",
+  "llc.description": "Start your Limited Liability Company (LLC) in the United States easily with WinnerDream. We support you through every step of the process.",
+  "llc.features": [
+    "✅ LLC formation in the state of your choice (Delaware, Wyoming, etc.)",
+    "📄 Drafting and delivery of Articles of Organization",
+    "🧾 EIN (Employer Identification Number) application with the IRS",
+    "📁 Custom Operating Agreement drafting",
+    "📬 U.S. business address (optional)",
+    "👨‍⚖️ Assistance opening a bank account (Mercury, Wise, etc.)",
+    "💼 Advice on tax and accounting obligations",
+    "📞 French-speaking customer support via email or WhatsApp"
+  ],
+  "llc.benefits.title": "Benefits of our LLC service:",
+  "llc.benefits.items": [
+    "✅ 100% remote setup – no travel required",
+    "✅ LLC created in 2–7 business days",
+    "✅ Support in English and French",
+    "✅ Access to business tools (Stripe, PayPal, Wise, Mercury, QuickBooks)",
+    "✅ Lifetime customer support via WhatsApp and Zoom"
+  ],
+  "llc.receive.title": "What you will receive:",
+  "llc.receive.items": [
+    "📄 Articles of Organization (official state registration)",
+    "📊 Federal EIN (Employer Identification Number)",
+    "📘 Operating Agreement (customized)",
+    "🛡️ Registered Agent Service (1 year included)",
+    "🏦 Help opening your U.S. business bank account"
+  ],
+  "llc.states.title": "States Available:",
+  "llc.states.text": "You can choose to register your LLC in Wyoming, Delaware, Texas, or Florida – depending on your business strategy and tax preferences. We can help you choose the best one.",
+  "llc.whatsapp": "📲 Get Started on WhatsApp",
+  "llc.appointment": "🗓️ Book Your Appointment",
+  "llc.footer": "© 2025 Winners Dream Business Growth LLC — All rights reserved.",
+
+  "shop.product.1.name": "Product Name 1",
+  "shop.product.1.description": "Simple description for this product.",
+  "shop.product.2.name": "Product Name 2",
+  "shop.product.2.description": "Another product description.",
+
+  "pageTitles.login": "Login",
+  "pageTitles.register": "Register",
+  "pageTitles.forgotPassword": "Forgot Password",
+  "pageTitles.dashboard": "My Dashboard",
+  "pageTitles.home": "Home",
+  "pageTitles.shop": "Shop",
+  "pageTitles.notFound": "Page Not Found",
+  "pageTitles.terms": "Terms and Conditions",
+  "pageTitles.serviceDetail": "Service Detail",
+  "pageTitles.planDetail": "Website Plan Detail",
+
+  "ads.title": "Online Advertising",
+  "ads.description": "Increase your business visibility through targeted advertising campaigns on Facebook, Instagram, and Google Ads. We optimize your budget for the best results.",
+  "ads.features": [
+    "Creation and management of Facebook & Instagram campaigns",
+    "Google Ads advertising (Search, Display, YouTube)",
+    "Precise and targeted audience segmentation",
+    "Design of attractive visuals and engaging copy",
+    "Performance reports and recommendations",
+    "Weekly tracking and optimization"
+  ],
+  "ads.benefits": [
+    "More traffic to your website",
+    "Generation of qualified leads",
+    "Improved brand awareness",
+    "Measurable return on investment"
+  ],
+  "ads.price": "Starting at $149 / month",
+
+  "app.title": "Mobile App Development",
+  "app.description": "We design custom mobile applications for Android and iOS, tailored to your business goals and your users' expectations.",
+  "app.features": [
+    "Native Android and iOS apps",
+    "Cross-platform development with React Native",
+    "Modern and intuitive user interface",
+    "Real-time database integration (e.g., Firebase)",
+    "Advanced features: geolocation, push notifications, payments, etc.",
+    "Publishing on App Store and Google Play"
+  ],
+  "app.benefits": [
+    "Professional mobile presence",
+    "Improved customer experience",
+    "Access to native phone features",
+    "Expand your business 24/7"
+  ],
+  "app.price": "depending on the complexity of the application",
+
+  "digital.title": "Digitalization",
+  "digital.description": "Go digital with our complete solutions to modernize your business. We support you with digital management, online presence, and process automation.",
+  "digital.features": [
+    "Creation of management tools (inventory, invoicing, etc.)",
+    "Digitization of physical documents into digital tools",
+    "Implementation of custom CRM and ERP systems",
+    "Training on using digital tools",
+    "Optimization of internal workflows",
+    "Support for digital transformation"
+  ],
+  "digital.benefits": [
+    "Time and efficiency savings",
+    "Reduction of human errors",
+    "Real-time data access",
+    "Improved decision-making"
+  ],
+  "digital.price": "Custom quote — depending on specific needs",
+
+  "logo.title": "Logo Design",
+  "logo.description": "We design professional logos that reflect your brand identity.",
+
+  "website.title": "Website Creation",
+  "website.description": "We design modern, fast, and custom websites tailored to your goals—whether they are informational, commercial, or community-oriented.",
+  "website.features": [
+    "Showcase site, e-commerce, or custom solution",
+    "Responsive design (desktop, mobile, tablet)",
+    "Basic SEO included",
+    "Custom pages: home, services, contact, etc.",
+    "Integration of tools: newsletter, blog, form",
+    "Online payment, booking, and more"
+  ],
+  "website.benefits": [
+    "Improve your online visibility",
+    "Attract more customers with a professional site",
+    "Build a credible and modern brand image",
+    "Your site evolves with your business"
+  ],
+  "website.price": "Starting at $250 — depending on the type of site and features. Custom quotes available.",
+  "website.subscription.available": true,
+  "website.subscription.description": "You can also choose an affordable monthly subscription, including website creation, hosting, maintenance, and updates.",
+  "website.subscription.plans": [
+    { "name": "Standard", "price": "$29/month", "duration": "12-month minimum" },
+    { "name": "Pro", "price": "$59/month", "duration": "12-month minimum" },
+    { "name": "Premium", "price": "$99/month", "duration": "12-month minimum" }
+  ],
+
+  "forgot.title": "Reset your password",
+  "forgot.placeholder": "Enter your email",
+  "forgot.button": "Send reset link",
+  "forgot.success": "📧 A reset email has been sent.",
+  "forgot.error": "❌ Failed to send email. Please check the address.",
+  "forgot.back": "Back to login",
+
+  "login.title": "Welcome to WinnerDream",
+  "login.subtitle": "Log in to manage your business online",
+  "login.email": "Email",
+  "login.password": "Password",
+  "login.button": "Log In",
+  "login.forgot": "Forgot your password?",
+  "login.click_here": "Click here",
+  "login.error": "Incorrect email or password",
+
+  "navbar": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "shop": "Shop",
+    "logout": "Logout"
+  }
 }

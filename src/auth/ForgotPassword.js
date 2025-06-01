@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../firebase/firebase';
+import { useTranslation } from 'react-i18next';
 
 function ForgotPassword() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
@@ -14,17 +16,17 @@ function ForgotPassword() {
 
     try {
       await sendPasswordResetEmail(auth, email);
-      setMessage('📧 Un lien de réinitialisation a été envoyé à votre adresse email.');
+      setMessage(t('forgot.success'));
     } catch (err) {
-      setError('❌ Erreur : ' + err.message);
+      setError(t('forgot.error') + err.message);
     }
   };
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">
-      <h2 className="text-2xl font-semibold mb-4">Mot de passe oublié ?</h2>
+      <h2 className="text-2xl font-semibold mb-4">{t('forgot.title')}</h2>
       <form onSubmit={handleReset}>
-        <label className="block mb-2">Votre email</label>
+        <label className="block mb-2">{t('forgot.label')}</label>
         <input
           type="email"
           value={email}
@@ -33,7 +35,7 @@ function ForgotPassword() {
           className="w-full p-2 border border-gray-300 rounded mb-4"
         />
         <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded">
-          Envoyer le lien de réinitialisation
+          {t('forgot.button')}
         </button>
       </form>
       {message && <p className="mt-4 text-green-600">{message}</p>}

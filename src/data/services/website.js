@@ -19,15 +19,15 @@ const websiteService = {
     "Votre site évolue avec votre entreprise",
   ],
   price:
-    "À partir de 250 € — selon le type de site et les fonctionnalités souhaitées. Devis personnalisé disponible.",
+    "À partir de 250 $ — selon le type de site et les fonctionnalités souhaitées. Devis personnalisé disponible.",
   subscriptionOption: {
     available: true,
     description:
-      "Vous pouvez aussi opter pour un abonnement mensuel à petit prix, incluant la création du site, l’hébergement, la maintenance et les mises à jour. Vous devenez pleinement propriétaire du site après 12 mois.",
+      "Vous pouvez aussi opter pour un abonnement mensuel à petit prix, incluant la création du site, l’hébergement, la maintenance et les mises à jour.",
     plans: [
-      { name: "Standard", price: "29 €/mois", duration: "12 mois minimum" },
-      { name: "Pro", price: "59 €/mois", duration: "12 mois minimum" },
-      { name: "Premium", price: "99 €/mois", duration: "12 mois minimum" },
+      { name: "Standard", price: "29 $/mois", duration: "12 mois minimum" },
+      { name: "Pro", price: "59 $/mois", duration: "12 mois minimum" },
+      { name: "Premium", price: "99 $/mois", duration: "12 mois minimum" },
     ],
   },
 };
